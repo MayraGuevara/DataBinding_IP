@@ -33,7 +33,9 @@
                 <TextBlock Height="100" Width="230" FontSize="30">
                     primer numero 
                 </TextBlock>
-                <TextBox Name="txtPrimerNumero" Height="100" Width="150" > <!--txt nombre del objeto -->
+                <TextBox Name="txtPrimerNumero" Height="100" Width="150" Text="{Binding Path=PrimerNumero,Mode=TwoWay}"  > <!--txt nombre del objeto 
+                                                                             Text="{Binding ElementName=txtSegundoNumero, Path=Text, Mode=TwoWay, 
+                                                                             UpdateSourceTrigger=PropertyChanged}"-->
                     
                 </TextBox>
             </StackPanel>
@@ -41,19 +43,36 @@
         </Border>
         <!--#endregion-->
         
-        <!--#region -->
+        <!--#region Segundo Numero txtBlock -->
 
         <Border Grid.Row="1" Grid.ColumnSpan="3" Background="Chocolate">
             <StackPanel Orientation="Horizontal">
                 <TextBlock Height="100" Width="230" FontSize="30">
                     primer numero
                 </TextBlock>
-                <TextBox Name="txtSegundoNmero" Height="100" Width="150" > </TextBox>
+                <TextBox Name="txtSegundoNumero" Height="100" Width="150" Text="{Binding Path=SegundoNumero, Mode=TwoWay}">
+                    
+                </TextBox>
 
             </StackPanel>
             
         </Border>
         
         <!--#endregion-->
+        
+        
+       <!--#region resultado-->
+        <Border Grid.Row="2" Grid.ColumnSpan="3" Background="Green">
+            <StackPanel  Orientation="Horizontal">
+                <TextBlock Height="100" Width="230" FontSize="30">
+                    resultado
+                </TextBlock>
+                <TextBox  Name="txtResultado" Height="100" Width="150" Text="{Binding Path=Resultado, Mode=TwoWay}">
+                    
+                </TextBox>
+            </StackPanel>
+            
+        </Border>
+
     </Grid>
 </Window>

@@ -24,5 +24,10 @@ namespace DataBinding_IP
         {
             InitializeComponent();
         }
+
+        private void TxtPrimerNumero_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
     }
 }
