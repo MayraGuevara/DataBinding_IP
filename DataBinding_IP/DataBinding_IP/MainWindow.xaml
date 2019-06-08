@@ -26,6 +26,21 @@
         </Grid.ColumnDefinitions>
         
         <!--#endregion-->
+
+        <!--#region primer numero txt y textBlock-->
+        
+        <Border Grid.Row="0" Grid.ColumnSpan="3" Background="Aquamarine">
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Height="100" Width="230" FontSize="30">
+                    primer numero 
+                </TextBlock>
+                <TextBox Name="txtPrimerNumero" Height="100" Width="150" > <!--txt nombre del objeto -->
+                    
+                </TextBox>
+            </StackPanel>
+            
+        </Border>
+        <!--#endregion-->
         
     </Grid>
 </Window>
