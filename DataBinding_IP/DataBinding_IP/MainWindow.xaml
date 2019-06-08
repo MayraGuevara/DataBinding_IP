@@ -8,5 +8,24 @@
         Title="MainWindow" Height="450" Width="800" WindowStartupLocation="CenterScreen">
     <Grid>
         
+        <!--#region definiendo filas-->
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/> <!--El asterisco simboliza que rellene el espacio que queda automaticamente -->
+        </Grid.RowDefinitions>
+        <!--#endregion-->
+        
+        <!--#region Definiendo Columnas-->
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        
+        <!--#endregion-->
+        
     </Grid>
 </Window>
