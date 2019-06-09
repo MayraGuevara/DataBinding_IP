@@ -7,13 +7,13 @@ using System.Threading.Tasks;
 
 namespace DataBinding_IP
 {
-    class Suma : INotifyPropertyChanged
+   public class Suma : INotifyPropertyChanged
     {
         private String primerNumero;
         private String segundoNumero;
         private String resultado;
      
-        private String PrimerNumero
+        public String PrimerNumero
         {
             get { return primerNumero; }
             set
@@ -31,7 +31,7 @@ namespace DataBinding_IP
             }
         }
 
-        private String SegundoNumero
+        public String SegundoNumero
         {
             get { return segundoNumero; }
             set
@@ -49,6 +49,24 @@ namespace DataBinding_IP
             }
         }
 
+        public string Resultado
+        {
+            get
+            {
+                int resutado = int.Parse(PrimerNumero) + int.Parse(SegundoNumero);
+                return resultado.ToString();
+            }
+
+            set
+            {
+                int suma = int.Parse(PrimerNumero) + int.Parse(SegundoNumero);
+                resultado = suma.ToString();
+                OnPropertyChanged("Resultado");
+            }
+        }
+
+
+
         public event PropertyChangedEventHandler PropertyChanged;
 
         private void OnPropertyChanged(String property)
@@ -60,5 +78,6 @@ namespace DataBinding_IP
         }
     }
 
+    
     
 }
