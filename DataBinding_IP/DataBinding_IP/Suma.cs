@@ -20,13 +20,9 @@ namespace DataBinding_IP
             {
                 int Numero;
                 bool resultado = int.TryParse(value, out Numero);  //tryParse intenta convertirlo en entero
-                if (resultado)
-                {
-                    primerNumero = value;
-                }
-
+                if (resultado) primerNumero = value;
                 OnPropertyChanged("PrimerNumero");
-                OnPropertyChanged("Reultado");
+                OnPropertyChanged("Resultado");
 
             }
         }
@@ -38,13 +34,9 @@ namespace DataBinding_IP
             {
                 int Numero;
                 bool resultado = int.TryParse(value, out Numero);  //tryParse intenta convertirlo en entero
-                if (resultado)
-                {
-                    segundoNumero = value;
-                }
-
+                if (resultado) segundoNumero = value;
                 OnPropertyChanged("SegundoNumero");
-                OnPropertyChanged("Reultado");
+                OnPropertyChanged("Resultado");
 
             }
         }
@@ -53,7 +45,7 @@ namespace DataBinding_IP
         {
             get
             {
-                int resutado = int.Parse(PrimerNumero) + int.Parse(SegundoNumero);
+                int resultado = int.Parse(PrimerNumero) + int.Parse(SegundoNumero);
                 return resultado.ToString();
             }
 

@@ -28,7 +28,7 @@ namespace DataBinding_IP
 
             InitializeComponent();
             Lasuma = new Suma { PrimerNumero = "1", SegundoNumero = "2" };
-            this.Content = Lasuma;
+            this.DataContext = Lasuma;
            
         }
 

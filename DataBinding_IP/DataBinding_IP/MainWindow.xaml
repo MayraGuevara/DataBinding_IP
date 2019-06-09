@@ -33,7 +33,7 @@
                 <TextBlock Height="100" Width="230" FontSize="30">
                     primer numero 
                 </TextBlock>
-                <TextBox Name="txtPrimerNumero" Height="100" Width="150" Text="{Binding Path=PrimerNumero,Mode=TwoWay}"  > <!--txt nombre del objeto 
+                <TextBox Name="txtPrimerNumero" Height="100" Width="150" Text="{Binding Path=PrimerNumero,Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"  > <!--txt nombre del objeto 
                                                                              Text="{Binding ElementName=txtSegundoNumero, Path=Text, Mode=TwoWay, 
                                                                              UpdateSourceTrigger=PropertyChanged}"-->
                     
@@ -50,7 +50,7 @@
                 <TextBlock Height="100" Width="230" FontSize="30">
                     primer numero
                 </TextBlock>
-                <TextBox Name="txtSegundoNumero" Height="100" Width="150" Text="{Binding Path=SegundoNumero, Mode=TwoWay}">
+                <TextBox Name="txtSegundoNumero" Height="100" Width="150" Text="{Binding Path=SegundoNumero, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}">
                     
                 </TextBox>
 
