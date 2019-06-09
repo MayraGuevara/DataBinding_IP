@@ -19,10 +19,23 @@ namespace DataBinding_IP
     /// Lógica de interacción para MainWindow.xaml
     /// </summary>
     public partial class MainWindow : Window
-    {
+    {  
+
+        public Suma Lasuma { get; set; }
+
         public MainWindow()
         {
+
             InitializeComponent();
+            Lasuma = new Suma { PrimerNumero = "1", SegundoNumero = "2" };
+            this.DataContext = Lasuma;
+           
         }
+
+
+      
     }
-}
+
+       
+    }
+
